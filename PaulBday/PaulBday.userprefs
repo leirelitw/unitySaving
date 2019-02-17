@@ -1,8 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Dialog.cs">
     <Files>
-      <File FileName="Assets/Dialog.cs" Line="43" Column="4" />
+      <File FileName="Assets/Dialog.cs" Line="1" Column="1" />
+      <File FileName="Assets/Character Paul/Scripts/SimpleCharacterControl.cs" Line="25" Column="36" />
+      <File FileName="Assets/Character Paul/Scripts/CameraLogic.cs" Line="1" Column="1" />
+      <File FileName="Assets/Character Paul/Scripts/Demo.cs" Line="37" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

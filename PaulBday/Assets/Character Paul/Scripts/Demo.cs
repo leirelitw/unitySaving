@@ -26,13 +26,16 @@ public class Demo : MonoBehaviour {
 
     private void OnGUI()
     {
-        GUILayout.BeginVertical(GUILayout.Width(Screen.width));
+		GUILayout.BeginVertical(GUILayout.Width(150));
 
-        GUILayout.Space(16);
+        GUILayout.Space(20);
 
         for(int i = 0; i < m_animations.Length; i++)
         {
-            if(i == 0) { GUILayout.BeginHorizontal(); }
+            if(i == 0){
+				GUILayout.BeginHorizontal();
+				GUILayout.Space(20);
+			}
 
             if(GUILayout.Button(m_animations[i]))
             {
@@ -42,8 +45,13 @@ public class Demo : MonoBehaviour {
                 }
             }
 
-            if(i == m_animations.Length - 1) { GUILayout.EndHorizontal(); }
-            else if (i == (m_animations.Length / 2)) { GUILayout.EndHorizontal(); GUILayout.BeginHorizontal(); }
+            if(i == m_animations.Length - 1) { 
+				GUILayout.EndHorizontal(); 
+			}
+            else if (i == (m_animations.Length / 2)) {
+				GUILayout.EndHorizontal(); 
+				GUILayout.BeginHorizontal(); 
+			}
         }
 
         Color oldColor = GUI.color;

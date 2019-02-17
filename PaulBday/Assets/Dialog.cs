@@ -9,15 +9,17 @@ public class Dialog : MonoBehaviour {
 	public Text dialogText;
 	public Text giantNumber;
 	private int count;
+	private int countFruit;
 	private AudioSource[] AS;
 	private int message = 1;
 
 	// Use this for initialization
 	void Start () {
 		count = 0;
+		countFruit = 0;
 		giantNumber.text = "";
 		AS = GetComponents<AudioSource>();
-		AS [1].Play ();
+		AS[2].Play ();
 	}
 
 	void OnTriggerEnter(Collider other) 
@@ -27,7 +29,13 @@ public class Dialog : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			count++;
 			DisplayPointCollected();
+			AS[1].Play();
+		}
+		else if (other.gameObject.CompareTag ("Fruit"))
+		{
+			other.gameObject.SetActive (false);
 			AS[0].Play();
+			countFruit++;
 		}
 	}
 
@@ -42,6 +50,7 @@ public class Dialog : MonoBehaviour {
 		else if (Input.GetKeyDown(KeyCode.Return) && message == 2)
 		{
 			dialogText.text = "Now your new mission is to collect 10 hearts through Champs-Elyssés";
+			message = 3;
 		}
 		if (count == 10)
 		{
@@ -52,6 +61,17 @@ public class Dialog : MonoBehaviour {
 		{
 			dialogText.text = "Your next mission is to go to the Eiffel Tower and get the necessary food to prepare a pique-nique.";
 		}
+		if (countFruit == 20)
+		{
+			dialogText.text = "Congratulations! You finished your second task! Now you can have a pique-nique with your love in the Eiffel Tower";
+			message = 4;
+			countFruit++;
+		}		
+		if (Input.GetKeyDown(KeyCode.Return) && message == 4)
+		{
+			dialogText.text = "Happy birthday mon amour! Tu es vraiment le meilleur. J'espère que tu t'as amusé avec le jeux-video. Je t'aime";
+		}
+
 	}
 
 	IEnumerator WaitOneSec(){

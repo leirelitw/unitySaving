@@ -59,6 +59,7 @@
      <Compile Include="Assets\Island\Scripts\FixedTiling.cs" />
      <Compile Include="Assets\Island\Scripts\WaterScroller.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\rotator.cs" />
      <Compile Include="Assets\Water\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
      <None Include="Assets\Fruit Pack\Shaders\ToonLitTransparent.shader" />
      <None Include="Assets\Water\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
